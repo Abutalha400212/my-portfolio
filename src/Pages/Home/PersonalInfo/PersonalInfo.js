@@ -1,14 +1,20 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import Personal from "../../../Components/Personal/Personal";
 
 const PersonalInfo = () => {
+  const [contact,setContact] = useState(false)
   return (
     <Grid sx={{
-      padding:"15px"
+      padding:"15px",
+      mt:1
     }} container spacing={5}>
       <Grid
         sx={{
           my: "auto",
+          backgroundImage:"url(https://i.ibb.co/kMGRNgn/dream-bg.png)",
+          backgroundRepeat:"no-repeat",
+          backgroundPosition:"cover"
         }}
         item
         xs={12}
@@ -38,21 +44,21 @@ const PersonalInfo = () => {
         >
           Front End Developer
         </Typography>
-        <Typography
+        {contact?<Personal/>:<Typography
           sx={{
             fontSize: "18px",
             fontFamily: '"Helvetica Neue"',
-            fontStyle: "normal",
             fontDisplay: "swap",
             fontWeight: 400,
             textAlign: "justify",
+            textDecoration:"capitalize"
           }}
         >
           A self-motivated and enthusiastic web developer with a deep interest
           in JavaScript. To work in the Software industry with modern web
           technologies of different local & multinational Software/ IT agencies
           of Bangladesh and grow rapidly with increasing responsibilities.
-        </Typography>
+        </Typography>}
         <Box
           sx={{
             "@media (min-width:600px)": {
@@ -64,6 +70,7 @@ const PersonalInfo = () => {
           }}
         >
           <Button
+          onClick={()=>setContact(!contact)}
             sx={{
               "&:hover": {
                 backgroundColor: "#673ab7",
@@ -72,7 +79,7 @@ const PersonalInfo = () => {
             }}
             variant="outlined"
           >
-            About Me
+            {contact?"Short Description":"About Me"}
           </Button>
           <Button
             sx={{

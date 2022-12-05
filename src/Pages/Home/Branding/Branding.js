@@ -4,11 +4,15 @@ import { Button, Grid, Typography } from "@mui/material";
 const Branding = () => {
   return (
     <Grid sx={{
-      padding:"15px"
+      padding:"15px",
+      mt:1
     }} container spacing={5}>
       <Grid
         sx={{
           my: "auto",
+          backgroundImage:"url(https://i.ibb.co/kMGRNgn/dream-bg.png)",
+          backgroundRepeat:"no-repeat",
+          backgroundPosition:"cover"
         }}
         item
         xs={12}

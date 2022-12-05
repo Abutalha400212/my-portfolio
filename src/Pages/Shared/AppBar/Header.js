@@ -13,7 +13,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container, Link } from "@mui/material";
-
+import file from '../../../Assest/Abu Talha Resume.pdf'
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
@@ -80,7 +80,9 @@ function Header(props) {
                 {item}
               </Button>
             ))}
-            <Link href="" ><Button>Resume</Button></Link>
+           <Link href={file} download> <Button sx={{
+            fontSize:"15px"
+           }}>Dowload Resume</Button></Link>
           </Box>
         </Toolbar>
       </Container>

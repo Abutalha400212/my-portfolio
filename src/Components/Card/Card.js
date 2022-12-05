@@ -39,6 +39,7 @@ export default function OverflowCard({ work }) {
             fontFamily: "cursive",
             color: "blue",
             fontWeight: 600,
+            textTransform:"uppercase"
           }}
         >
           {title}
