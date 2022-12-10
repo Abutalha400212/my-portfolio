@@ -1,19 +1,31 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Personal from "../../../Components/Personal/Personal";
-
+import { Typewriter } from 'react-simple-typewriter'
 const PersonalInfo = () => {
+
   const [contact,setContact] = useState(false)
+  const handleType = (count) => {
+ 
+    console.log(count)}
+  
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`)
+  }
+
   return (
     <Grid sx={{
       padding:"15px",
-      mt:1
+      mt:1,
+      minHeight:"100vh"
     }} container spacing={5}>
       <Grid
         sx={{
           my: "auto",
           backgroundImage:"url(https://i.ibb.co/kMGRNgn/dream-bg.png)",
           backgroundRepeat:"no-repeat",
+          backgroundSize:"contain",
           backgroundPosition:"cover"
         }}
         item
@@ -22,7 +34,7 @@ const PersonalInfo = () => {
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: "26px",
             fontFamily: "serif",
             fontStyle: "normal",
             fontDisplay: "swap",
@@ -30,19 +42,40 @@ const PersonalInfo = () => {
             color: "primary.blue",
           }}
         >
-          Hi, I am Abu Talha
+          <Typewriter
+            words={["Hi I am Abu Talha"]}
+            loop={2}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            onLoopDone={handleDone}
+            onType={handleType}
+          />
         </Typography>
         <Typography
           sx={{
-            fontSize: "18px",
-            fontFamily: "monospace",
+            fontSize: "20px",
+            fontFamily: "cursive",
             fontStyle: "normal",
             fontDisplay: "swap",
-            fontWeight: 400,
-            color: "primary.blue",
+            fontWeight: 600,
+            color: "blue",
+            textTransform:"uppercase"
           }}
         >
-          Front End Developer
+           <Typewriter
+            words={["Front End Web Developer","Full Stack Web Developer","MERN Stack Web Developer"]}
+            loop={2}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            onLoopDone={handleDone}
+            onType={handleType}
+          />
         </Typography>
         {contact?<Personal/>:<Typography
           sx={{

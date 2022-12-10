@@ -1,11 +1,11 @@
-import { Link, Paper, Typography } from "@mui/material";
+import { Avatar, Paper, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 
 const Footer = () => {
   return (
     <Paper
-      sx={{ marginTop: "calc(10% + 60px)", marginBottom: 1 }}
+      sx={{ marginTop: "calc(10% + 60px)", marginBottom: 1,backgroundImage:"url(https://i.ibb.co/MSQG3wZ/wave-haikei.png)" , backgroundSize:"cover",backgroundPosition:"center" ,backgroundRepeat:"no-repeat",p:3}}
       component="footer"
       square
       variant="outlined"
@@ -18,13 +18,25 @@ const Footer = () => {
             display: "flex",
           }}
         >
-          <Link href="/">
-            <img
-              src="https://i.ibb.co/rH3PZmy/logo.png"
-              height={50}
-              alt="Logo"
-            />
-          </Link>
+          <Box>
+          <Avatar
+            alt=""
+            src="https://i.ibb.co/qj7dCSP/Profile.png"
+            sx={{ width: 90, height: 90 }}
+          />
+          <Typography
+            sx={{
+              fontSize: "20px",
+
+              fontFamily: "monospace",
+              fontWeight: "bold",
+              color: "blue",
+            }}
+          >
+            {" "}
+            PORTFOLIO
+          </Typography>
+          </Box>
         </Box>
 
         <Box
@@ -38,7 +50,7 @@ const Footer = () => {
           <Typography
             sx={{
               fontFamily: "cursive",
-              fontSize: "15px",
+              fontSize: "12px",
             }}
             variant="caption"
             color="initial"

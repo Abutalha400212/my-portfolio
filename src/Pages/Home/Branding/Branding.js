@@ -1,17 +1,27 @@
 import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
-
+import { Typewriter } from 'react-simple-typewriter'
 const Branding = () => {
+  const handleType = (count) => {
+ 
+    console.log(count)}
+  
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`)
+  }
+
   return (
     <Grid sx={{
       padding:"15px",
-      mt:1
+      minHeight:"100vh"
     }} container spacing={5}>
       <Grid
         sx={{
           my: "auto",
           backgroundImage:"url(https://i.ibb.co/kMGRNgn/dream-bg.png)",
           backgroundRepeat:"no-repeat",
+          backgroundSize:"contain",
           backgroundPosition:"cover"
         }}
         item
@@ -26,7 +36,17 @@ const Branding = () => {
             textTransform: "uppercase",
           }}
         >
-          As a proficient Web Developer,{" "}
+          <Typewriter
+            words={["As a proficient Web Developer"]}
+            loop={2}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            onLoopDone={handleDone}
+            onType={handleType}
+          />
         </Typography>
         <Typography
           sx={{
