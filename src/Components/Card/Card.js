@@ -4,25 +4,23 @@ import {
   Typography,
   Box,
   IconButton,
-  Link,
   ButtonGroup,
   Button,
+  CardMedia,
 } from "@mui/material";
 import * as React from "react";
-import IosShareIcon from "@mui/icons-material/IosShare";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { LinkMUI, LinkMUI2 } from "../../Styled/Styled";
+import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
+import DetailsRoundedIcon from '@mui/icons-material/DetailsRounded';
 
 export default function OverflowCard({ work }) {
-  const { title, description, link, used, github } = work;
+  const { title, description, link, used,titleImg,_id } = work;
   return (
     <Card
       sx={{
         boxShadow: "2px 2px 2px 1px rgba(2, 2, 2, 0.2)",
-        "@media (min-width:600px)": {
-          "&:hover": {
-            transform: "scale(105%)",
-          },
-        },
+       background:"transparent",
+       p:1
       }}
       variant="outlined"
     >
@@ -31,13 +29,20 @@ export default function OverflowCard({ work }) {
           padding: "0 10px",
         }}
       >
+<CardMedia
+        component="img"
+        height="200"
+        image={titleImg}
+        alt=""
+
+      />
         <Typography
           level="h2"
           sx={{
             fontSize: "20px",
-            mt: 2,
+            mt: 1,
             fontFamily: "cursive",
-            color: "blue",
+            color: "white",
             fontWeight: 600,
             textTransform:"uppercase"
           }}
@@ -46,7 +51,7 @@ export default function OverflowCard({ work }) {
         </Typography>
         <Typography
           level="body2"
-          sx={{ mt: 0.5, mb: 2, fontSize: "15px", fontFamily: "monospace" }}
+          sx={{ mt: 0.5, mb: 1, fontSize: "15px", fontFamily: "monospace",color:"white" }}
         >
           {description}
         </Typography>
@@ -55,19 +60,20 @@ export default function OverflowCard({ work }) {
             sx={{
               fontFamily: "monospace",
               fontWeight: 700,
-              color: "blueviolet",
+              color: "#F300B6",
             }}
           >
             {" "}
             It is used for..
           </Typography>
           {used.map((use) => (
-            <ButtonGroup variant="outlined" aria-label="outlined button group">
+            <ButtonGroup variant="outlined" color="info" aria-label="outlined button group">
               <Button
                 sx={{
                   fontSize: "12px",
                   marginRight: 0.5,
-                  fontFamily:"sans"
+                  fontFamily:"sans",
+                  color:"white"
                 }}
               >
                 {use}
@@ -80,23 +86,20 @@ export default function OverflowCard({ work }) {
       <Divider />
 
       <Box
-        variant="soft"
         sx={{
           display: "flex",
-          gap: 0.5,
-          py: 0.5,
         }}
       >
-        <Link target="_blank" href={link}>
-          <IconButton color="secondary">
-            <IosShareIcon></IosShareIcon>
+        <LinkMUI className="" target="_blank" href={link} >
+          <IconButton>
+           <Button sx={{borderRadius:50,color:"white",fontFamily:"monospace",textTransform:"capitalize"}} size="small"  color="secondary"><LanguageRoundedIcon/>Visit</Button>
           </IconButton>
-        </Link>
-        <Link target="_blank" href={github}>
-          <IconButton color="success">
-            <GitHubIcon />
-          </IconButton>
-        </Link>
+        </LinkMUI>
+        <LinkMUI2 to={`/details/${_id}`}>
+          <IconButton><Button sx={{borderRadius:50,color:"white",fontFamily:"monospace",textTransform:"capitalize"}} size="small" color="secondary">
+           <DetailsRoundedIcon sx={{mt:-.3}}/> Details
+          </Button></IconButton>
+        </LinkMUI2>
       </Box>
     </Card>
   );

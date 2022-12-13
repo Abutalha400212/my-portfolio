@@ -1,17 +1,24 @@
 import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import OverflowCard from "../../../../Components/Card/Card";
 
 const Allworks = () => {
   const [works, setWorks] = useState([]);
   useEffect(() => {
-    fetch("/works.json")
+    fetch("https://porfolio-server.vercel.app/projects")
       .then((res) => res.json())
       .then((data) => setWorks(data));
   }, []);
   return (
-   
-      <Grid container spacing={2} sx={{
+   <Box sx={{
+    background:"linear-gradient(to right, #000046, #1cb5e0)",
+    backgroundPosition:"center",
+    backgroundSize:"cover",
+    p:2,mt:2,
+   }}>
+    
+    <Grid container spacing={2} sx={{
         minHeight:"100vh"
       }} >
         {works.map((work) => (
@@ -20,6 +27,7 @@ const Allworks = () => {
         </Grid>
       ))}
       </Grid>
+   </Box>
   );
 };
 

@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   return (
     <Paper
-      sx={{ marginTop: "calc(10% + 60px)", marginBottom: 1,backgroundImage:"url(https://i.ibb.co/MSQG3wZ/wave-haikei.png)" , backgroundSize:"cover",backgroundPosition:"center" ,backgroundRepeat:"no-repeat",p:3}}
+      sx={{p:3,background:'transparent'}}
       component="footer"
       square
       variant="outlined"
@@ -53,7 +53,7 @@ const Footer = () => {
               fontSize: "12px",
             }}
             variant="caption"
-            color="initial"
+            color="white"
           >
             Copyright ©2022 [Design and Build by ABU TALHA]
           </Typography>

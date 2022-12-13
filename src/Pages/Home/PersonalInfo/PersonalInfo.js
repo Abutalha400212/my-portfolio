@@ -1,10 +1,8 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
-import Personal from "../../../Components/Personal/Personal";
+import { Box, Button, Grid, Link, Typography } from "@mui/material";
+import React from "react";
 import { Typewriter } from 'react-simple-typewriter'
+import file from '../../../Assest/Abu Talha Resume.pdf'
 const PersonalInfo = () => {
-
-  const [contact,setContact] = useState(false)
   const handleType = (count) => {
  
     console.log(count)}
@@ -15,31 +13,24 @@ const PersonalInfo = () => {
   }
 
   return (
-    <Grid sx={{
-      padding:"15px",
-      mt:1,
-      minHeight:"100vh"
-    }} container spacing={5}>
-      <Grid
-        sx={{
-          my: "auto",
-          backgroundImage:"url(https://i.ibb.co/kMGRNgn/dream-bg.png)",
-          backgroundRepeat:"no-repeat",
-          backgroundSize:"contain",
-          backgroundPosition:"cover"
-        }}
-        item
-        xs={12}
-        md={6}
-      >
+    <Box sx={{
+      padding:"50px",
+      minHeight:"100vh",
+      width:{md:"70%",sm:"100%"},
+      mx:"auto",
+      p:4,
+      pt:18
+      
+    }} >
         <Typography
           sx={{
-            fontSize: "26px",
+            fontSize:{md:"50px"},
             fontFamily: "serif",
             fontStyle: "normal",
             fontDisplay: "swap",
             fontWeight: 600,
-            color: "primary.blue",
+            color: "yellow",
+            textAlign:"center"
           }}
         >
           <Typewriter
@@ -56,13 +47,14 @@ const PersonalInfo = () => {
         </Typography>
         <Typography
           sx={{
-            fontSize: "20px",
+            fontSize: {md:"42px"},
             fontFamily: "cursive",
             fontStyle: "normal",
             fontDisplay: "swap",
             fontWeight: 600,
             color: "blue",
-            textTransform:"uppercase"
+            textTransform:"uppercase",
+            textAlign:"center"
           }}
         >
            <Typewriter
@@ -77,58 +69,52 @@ const PersonalInfo = () => {
             onType={handleType}
           />
         </Typography>
-        {contact?<Personal/>:<Typography
+        <Typography
           sx={{
-            fontSize: "18px",
-            fontFamily: '"Helvetica Neue"',
-            fontDisplay: "swap",
+            fontSize: {md:"18px"},
+            fontFamily:"monospace",
             fontWeight: 400,
-            textAlign: "justify",
-            textDecoration:"capitalize"
+            color:"white",
+            textAlign:"center",
+            my:2
           }}
         >
           A self-motivated and enthusiastic web developer with a deep interest
           in JavaScript. To work in the Software industry with modern web
           technologies of different local & multinational Software/ IT agencies
           of Bangladesh and grow rapidly with increasing responsibilities.
-        </Typography>}
+        </Typography>
         <Box
           sx={{
             "@media (min-width:600px)": {
               width: "100%",
             },
             display: "flex",
+            justifyContent:"center",
             marginTop: "0.4rem",
             gap: "5px",
           }}
-        >
+         >
+         <Link sx={{textDecoration:"none"}} href={file} download>
+              {" "}
+              <Button
+              color="info"
+                sx={{
+                  fontSize: "15px",
+                  
+                }}
+              >
+                Dowload Resume
+              </Button>
+            </Link>
           <Button
-          onClick={()=>setContact(!contact)}
-            sx={{
-              "&:hover": {
-                backgroundColor: "#673ab7",
-                color: "#ffffff",
-              },
-            }}
-            variant="outlined"
-          >
-            {contact?"Short Description":"About Me"}
-          </Button>
-          <Button
-            sx={{
-              "&:hover": {
-                backgroundColor: "#3f51b5",
-              },
-            }}
+          color="secondary"
           >
             Get In Touch
           </Button>
         </Box>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <img src="https://i.ibb.co/C1ZtxDW/pic.png" alt="" width={"100%"} />
-      </Grid>
-    </Grid>
+      </Box>
+     
   );
 };
 

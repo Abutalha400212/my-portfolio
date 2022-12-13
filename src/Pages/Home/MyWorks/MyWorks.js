@@ -1,63 +1,36 @@
-import { Box, Button, Grid, styled, Typography } from "@mui/material";
+import { Box, Button, Grid} from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Audio } from "react-loader-spinner";
 import OverflowCard from "../../../Components/Card/Card";
-import { LinkMUI } from "../../../Styled/Styled";
 const MyWorks = () => {
   const [works, setWorks] = useState([]);
+const [loading,setLoading] = useState(true)
   const [show, setShow] = useState(false);
-  const Navlink = styled(Link)((theme) => ({
-    textDecoration: "none",
-    color:"white"
-  }));
 
   useEffect(() => {
-    fetch("/works.json")
+    fetch("https://porfolio-server.vercel.app/projects")
       .then((res) => res.json())
-      .then((data) => setWorks(data));
+      .then((data) => {
+        setWorks(data)
+      setLoading(false)
+      });
   }, []);
-
+if(loading){
+  return <><Audio
+  height="100"
+  width="100%"
+  color="#4fa94d"
+  ariaLabel="audio-loading"
+  wrapperStyle={{}}
+  wrapperClass="wrapper-class"
+  visible={true}
+/></> 
+}
   return (
     <Box sx={{
       minHeight:"100vh",
-      my:10
+      py:5
     }}>
-      <Box
-        sx={{
-          display: "flex",
-          my:2
-         
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: "12px",
-            fontWeight: 600,
-            fontFamily: "monospace",
-            color: "primary.blue",
-            marginRight: "5px",
-          }}
-        >
-          Some of my Works{" "}
-        </Typography>
-        <LinkMUI />
-
-        <Button
-          sx={{
-            fontSize: "10px",
-            marginTop: 0,
-            backgroundColor: "#f50057",
-            marginLeft: "5px",
-            textDecoration: "none",
-            color: "white",
-          }}
-        >
-          {" "}
-          <Navlink to={"/projects"}>
-            All Projects
-          </Navlink>
-        </Button>
-      </Box>
 
       <Box>
         <Grid container spacing={2}>
@@ -75,7 +48,7 @@ const MyWorks = () => {
           <Button
             onClick={() => setShow(true)}
             sx={{
-              mt: 2,
+              mt: 3,
               width: "30%",
               mx: "auto",
               display: `${show && "none"}`,

@@ -12,9 +12,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Avatar, Container, Link } from "@mui/material";
-import file from "../../../Assest/Abu Talha Resume.pdf";
-import { NavLink } from "react-router-dom";
+import { Avatar, Container } from "@mui/material";
+import { Link, NavLink } from "react-router-dom";
 import "./AppBar.css";
 const drawerWidth = 240;
 
@@ -27,17 +26,21 @@ function Header(props) {
   };
 
   const navItems = [
-    <NavLink className={"home"} to={"/home"}>
-      Home
-    </NavLink>,
-    <NavLink className={"home"} to={"/branding"}>
-      Brand
-    </NavLink>,
     <NavLink className={"home"} to={"/projects"}>
       projects
     </NavLink>,
+    <NavLink className={"home"} to={"/skill"}>
+      Skills
+    </NavLink>,
     <NavLink className={"home"} to={"/contact"}>
       Contact
+    </NavLink>,
+    
+    <NavLink className={"home"} to={"/about"}>
+      About US
+    </NavLink>,
+    <NavLink className={"home"} to={"/blog"}>
+      Blogs
     </NavLink>,
   ];
 
@@ -64,14 +67,12 @@ function Header(props) {
     <Box
       sx={{
         display: "flex",
-        marginBottom: "30px",
-        backgroundColor: "transparent",
       }}
     >
-      <Container component="nav" >
+      <Container component="nav">
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="info"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -80,46 +81,34 @@ function Header(props) {
             <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-            <Box sx={{
-              display:"flex",
-              alignItems:"center",
-              
-            }}>
-            <Avatar
-              alt=""
-              src="https://i.ibb.co/qj7dCSP/Profile.png"
-              sx={{ width: 56, height: 56 }}
-            /> 
-            <Typography sx={{
-              fontSize:"22px",
-              my:"auto",
-              fontFamily:"monospace",
-              fontWeight:"bold",
-              color:"blue"
-            }}> PORTFOLIO
-            </Typography>
-           </Box>
+            <Link to="/">
+              <Avatar
+                alt=""
+                src="https://i.ibb.co/7kJpRht/download.png"
+                sx={{ width: 50, height: 50}}
+              /></Link>
+           
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
                 key={item}
-                sx={{ color: "primary.main", textDecoration: "none" }}
+                sx={{ color: "secondary", textDecoration: "none" }}
                 variant="text"
               >
                 {item}
               </Button>
             ))}
-            <Link href={file} download>
-              {" "}
-              <Button
-                sx={{
-                  fontSize: "15px",
-                }}
-              >
-                Dowload Resume
-              </Button>
-            </Link>
+
+            <Button
+            variant="contained"
+            color="info"
+              sx={{
+                fontSize: "15px",
+              }}
+            >
+              Hire ME
+            </Button>
           </Box>
         </Toolbar>
       </Container>

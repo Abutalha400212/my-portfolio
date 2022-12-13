@@ -1,66 +1,147 @@
 [
-    {
-        "id":"1237897089698",
-        "title":"Resale Market",
-        "link":"https://resellerbd-b4e3e.web.app/",
-        "github":"https://github.com/Abutalha400212/Resale-Market",
-        "description":"A Single page web app with dashboard where people can get second hand mobile. A user can review any products.",
-        "used":["React js","Node JS" ,"MongoDB","Express JS","Tailwind CSS","Stripe","Firebase"]
-    },
-    {
-        "id":"123789708946557",
-        "title":"Doctors LAB",
-        "link":"https://doctorslab-2550b.web.app/",
-        "github":"https://github.com/Abutalha400212/doctors-portal",
-        "description":"A Single page web app with dashboard where people can pick the date and time and fix an appointment.",
-        "used":["React js","Node JS" ,"MongoDB","Express JS","Tailwind CSS","Stripe","Firebase"]
-    },
-    {
-        "id":"12378970892345",
-        "title":"Car Service",
-        "link":"https://carservicebd-64880.web.app/",
-        "github":"https://github.com/Abutalha400212/Car-Service",
-        "description":"A Single page web app where people can service his Car. A user can buy servicing equipment at online order",
-        "used":["React js","Node JS" ,"MongoDB","Express JS","Tailwind CSS","Firebase"]
-    },
-    {
-        "id":"12378970892345",
-        "title":"Domestic Travel",
-        "link":"https://tourist-e95ee.web.app/",
-        "github":"https://github.com/Abutalha400212/domestic-portal",
-        "description":"A Single page web app where people can pick the date and time and fix an tour. A user can to know about tourist place.",
-        "used":["React js","Node JS" ,"MongoDB","Express JS","Tailwind CSS","Firebase"]
-    },
-    {
-        "id":"12378970892345",
-        "title":"Domestic Travel",
-        "link":"https://tourist-e95ee.web.app/",
-        "github":"https://github.com/Abutalha400212/domestic-portal",
-        "description":"A Single page web app where people can pick the date and time and fix an tour. A user can to know about tourist place.",
-        "used":["React js","Node JS" ,"MongoDB","Express JS","Tailwind CSS","Firebase"]
-    },
-    {
-        "id":"12378974657687",
-        "title":"Quiz Crackers",
-        "link":"https://meek-gingersnap-c8b23c.netlify.app/",
-        "github":"https://github.com/Abutalha400212/E-learning-app",
-        "description":"An Learning platform for programmming languages that very Effective learning al this moment in the world.",
-        "used":["React js","Bootstrap CSS","Firebase"]
-    },
-    {
-        "id":"12378974657687",
-        "title":"Mitech Technology",
-        "link":"https://learntechorg.web.app/",
-        "github":"https://github.com/Abutalha400212/E-learning-app",
-        "description":"An Learning platform for Web Source that very Effective learning al this moment in the world.",
-        "used":["React js","Bootstrap CSS","Firebase"]
-    },
-    {
-        "id":"12378974657687",
-        "title":"Quiz Crackers",
-        "link":"https://meek-gingersnap-c8b23c.netlify.app/",
-        "github":"https://github.com/Abutalha400212/mitechTechnology",
-        "description":"An Learning platform for programmming languages that very Effective learning al this moment in the world.",
-        "used":["React js","Bootstrap CSS"]
-    }
+  {
+    "title": "Resale Market",
+    "link": "https://resellerbd-b4e3e.web.app/",
+    "titleImg": "https://i.ibb.co/VMs3yPW/Capture-1.png",
+    "img": [
+      "https://i.ibb.co/VMs3yPW/Capture-1.png",
+      "https://i.ibb.co/0jpZ8DJ/Capture-2.png",
+      "https://i.ibb.co/C5NTFMT/Capture-3.png"
+    ],
+    "github": "https://github.com/Abutalha400212/Resale-Market",
+    "description": "A Single page web app with dashboard where people can get second hand mobile. A user can review any products.",
+    "used": [
+      "React js",
+      "Node JS",
+      "MongoDB",
+      "Express JS",
+      "Tailwind CSS",
+      "Stripe",
+      "Firebase"
+    ],
+    "details": [
+      "Authentication with Google",
+      "Email and password Protected Route",
+      "Error Handling and Wonderful Toast Message",
+      "A dashboard section client can handle your history Have a payment Gateway for buying"
+    ]
+  },
+  {
+    "title": "Doctors LAB",
+    "link": "https://doctorslab-2550b.web.app/",
+    "github": "https://github.com/Abutalha400212/doctors-portal",
+    "description": "A Single page web app with dashboard where people can pick the date and time and fix an appointment.",
+    "titleImg": "https://i.ibb.co/1d44Td4/Capture-1.png",
+    "img": [
+      "https://i.ibb.co/1d44Td4/Capture-1.png",
+      "https://i.ibb.co/0BfwnSf/Capture-2.png",
+      "https://i.ibb.co/hZFH4tf/Capture-3.png"
+    ],
+    "used": [
+      "React js",
+      "Node JS",
+      "MongoDB",
+      "Express JS",
+      "Tailwind CSS",
+      "Stripe",
+      "Firebase"
+    ],
+    "details": [
+      "Authentication with Google",
+      "Email and password Protected Route",
+      "Error Handling and Wonderful Toast Message",
+      "A doctor can review his appointments and prescribe medicine to a Patient from his dashboard.",
+      "People can pick the date and time and fix an appointment .Have a payment Gateway for getting appointment"
+    ]
+  },
+  {
+    "title": "Car Service",
+    "link": "https://carservicebd-64880.web.app/",
+    "github": "https://github.com/Abutalha400212/Car-Service",
+    "description": "A Single page web app where people can service his Car. A user can buy servicing equipment at online order",
+    "used": [
+      "React js",
+      "Node JS",
+      "MongoDB",
+      "Express JS",
+      "Tailwind CSS",
+      "Firebase"
+    ],
+    "titleImg": "https://i.ibb.co/mFfRq6c/Capture-1.png",
+    "img": [
+      "https://i.ibb.co/bPknb6d/Capture-2.png",
+      "https://i.ibb.co/kS04K77/Capture-3.png",
+      "https://i.ibb.co/ygyrKjH/Capture-4.png"
+    ],
+    "details": [
+      "Authentication with Google",
+      "Email and password Protected Route",
+      "Error Handling and Wonderful Toast Message",
+      "A user can get service and buy motor equipment Only admin get access to show whose take service"
+    ]
+  },
+
+  {
+    "title": "Domestic Travel",
+    "titleImg": "https://i.ibb.co/JQzYSrn/Capture-2.png",
+    "img": [
+      "https://i.ibb.co/ZGbycHt/Capture-1.png",
+      "https://i.ibb.co/JQzYSrn/Capture-2.png",
+      "https://i.ibb.co/s5tsQMj/Capture-3.png"
+    ],
+    "link": "https://tourist-e95ee.web.app/",
+    "github": "https://github.com/Abutalha400212/domestic-portal",
+    "description": "A Single page web app where people can pick the date and time and fix an tour. A user can to know about tourist place.",
+    "used": [
+      "React js",
+      "Node JS",
+      "MongoDB",
+      "Express JS",
+      "Tailwind CSS",
+      "Firebase"
+    ],
+    "details": [
+      "Authentication with Google",
+      "Email and password Protected Route",
+      "Error Handling and Wonderful Toast Message",
+      "A Review Section client can create, update, delete their review and rating"
+    ]
+  },
+  {
+    "title": "Quiz Crackers",
+    "titleImg": "https://i.ibb.co/8sTBS41/Capture-1.png",
+    "img": [
+      "https://i.ibb.co/8sTBS41/Capture-1.png",
+      " https://i.ibb.co/7jbS1vD/Capture-2.png",
+      "https://i.ibb.co/3rDqM5w/Capture-3.png"
+    ],
+    "link": "https://meek-gingersnap-c8b23c.netlify.app/",
+    "github": "https://github.com/Abutalha400212/E-learning-app",
+    "description": "An Learning platform for programmming languages that very Effective learning al this moment in the world.",
+    "used": ["React js", "Bootstrap CSS", "Firebase"],
+    "details":[
+        "It is Quiz Based Website",
+        "People could be learnt core knowledge of programming Languages",
+        "If your answer is incorrect, its showing you wrong and showing correct Answer"
+    ]
+  },
+  {
+    "title": "Mitech Technology",
+    "titleImg": "https://i.ibb.co/Wp7BYTP/Capture-1.png",
+    "img": [
+      "https://i.ibb.co/Wp7BYTP/Capture-1.png",
+      "https://i.ibb.co/R48NCPx/Capture-2.png",
+      " https://i.ibb.co/ZJjn89t/Capture-3.png"
+    ],
+    "link": "https://learntechorg.web.app/",
+    "github": "https://github.com/Abutalha400212/E-learning-app",
+    "description": "An Learning platform for Web Source that very Effective learning al this moment in the world.",
+    "used": ["React js", "Bootstrap CSS", "Firebase"],
+    "details":[
+      "Error Handling and Wonderful Toast Message",
+      "An Learning platform for Web Source that very Effective learning al this moment in the world.",
+      "People could be learnt core knowledge of programming Languages",
+      "it is learning based website to gain core knowledge of WWW"
+    ]
+  }
 ]

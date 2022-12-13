@@ -1,40 +1,40 @@
 import { Container, Divider } from "@mui/material";
+import HomeLayout from "../../layout/HomeLayout";
 import Branding from "./Branding/Branding";
 import Contact from "./Contact/Contact";
-import MyWorks from "./MyWorks/MyWorks";
-import PersonalInfo from "./PersonalInfo/PersonalInfo";
 import Skills from "./Skills/Skills";
 
 const Home = () => {
   return (
-    <Container>
-     <Divider
+    <>
+     {/* <Divider
         sx={{
           fontFamily: "cursive",
           fontWeight: 600,
-          color: "#516395",
+          color: "white",
         }}
         textAlign="left"
       >
         Personal Info
       </Divider>
-      <PersonalInfo />
+      <PersonalInfo /> */}
+      <HomeLayout/>
       <Divider
         sx={{
           fontFamily: "cursive",
           fontWeight: 600,
-          color: "#516395",
+          color: "white",
         }}
         textAlign="right"
       >
-        Motivational Branding
+        About US
       </Divider>
       <Branding />
       <Divider
         sx={{
           fontFamily: "cursive",
           fontWeight: 600,
-          color: "#516395",
+          color: "white",
           my:3
         }}
         textAlign="left"
@@ -46,7 +46,7 @@ const Home = () => {
         sx={{
           fontFamily: "cursive",
           fontWeight: 600,
-          color: "#516395",
+          color: "white",
          
         }}
         textAlign="left"
@@ -54,20 +54,21 @@ const Home = () => {
         Development
       </Divider>
    
-      <MyWorks />
+   
       <Divider
         sx={{
           fontFamily: "cursive",
           fontWeight: 600,
-          color: "#516395",
-          marginTop:'50px'
+          color: "white",
+          marginTop:'50px',
+          my:3
         }}
         textAlign="right"
       >
         Contact Info
       </Divider>
       <Contact />
-    </Container>
+    </>
   );
 };
 export default Home;
